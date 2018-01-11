@@ -20,7 +20,7 @@
 	  {{ content }}
 	  </div>
 
-		{% unless page.categories == empty %}
+		<!-- {% unless page.categories == empty %}
 		<ul class="tag_box list-unstyled list-inline">
 		  <li><i class="fa fa-folder-open"></i></li>
 		  {% assign categories_list = page.categories %}
@@ -39,7 +39,7 @@
 			{% endfor %}
 		  {% endif %}
 		</ul>
-		{% endunless %}  
+		{% endunless %}   -->
 
 		{% unless page.tags == empty %}
 		<ul class="list-inline">
@@ -92,7 +92,7 @@
       </section>
 
       <section class="col-sm-6 author">
-        <img src="/images/favicon.ico" class="img-rounded author-image" />
+        <img src="/images/favicon.ico" class="img-rounded author-image" width="20%" height="20%" />
         <h4 class="section-title author-name">{{site.author.name}}</h4>
         <p class="author-bio">{{site.author.bio}}</p>
       </section>
