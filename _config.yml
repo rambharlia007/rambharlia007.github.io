@@ -2,7 +2,7 @@
 
 paginate: 10 # pagination based on number of posts
 paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
+exclude: ["README.md","2013-11-14-sample.md","2013-11-14-sample-2.md","2013-11-15-configuration.md","2013-11-15-hello-world.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
 disqus: rambharlia
