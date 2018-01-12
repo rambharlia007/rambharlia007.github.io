@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Handle SELECT INTO TempTable In IF/ELSE Statement
-categories: [MS-Sql]
-tags: [MS-Sql,What-Did-I-Learn-Today]
-description: Handle SELECT INTO TempTable In IF/ELSE Statement
+title: getting started with Vue js part-1
+categories: [Vue-js]
+tags: [Vue-js,What-Did-I-Learn-Today]
+description: getting started with Vue js part-1
 fullview: true
 comments: true.
 ---
+**Introduction**
+Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.
 
 **Data property**
 * can be an object or function
@@ -23,36 +25,60 @@ comments: true.
 * Vue is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
 
 **Interpolations**
-* Text : example <span>Message: {{ msg }}</span>, The double mustaches interprets the data as plain text, not HTML
-* <span v-once>This will never change: {{ msg }}</span>, do not update UI on data change
-* <span v-html="rawHtml"></span>
+* The double mustaches interprets the data as plain text, not HTML
+{% highlight html %}
+ Text : example <span>Message: {{ msg }}</span> 
+{% endhighlight %}
+
+* v-once directive will not update UI on data change
+{% highlight html %}
+ <span v-once>This will never change: {{ msg }}</span> 
+{% endhighlight %}
+
 * Note that you cannot use v-html to compose template partials, because Vue is not a string-based templating engine
+{% highlight html %}
+<span v-html="rawHtml"></span>
+{% endhighlight %}
 
 **Attributes**
-* <div v-bind:id="campaing_123"></div>
 * attribute will not be included in the element if the value of the property is null, undefined or false
+{% highlight html %}
+<div v-bind:id="campaing_123"></div>
+{% endhighlight %}
 
 **JavaScript Expressions**
-* <div v-bind:id="'modal-' + id"></div>
-* binding can only contain one single expression, ###
+* binding can only contain one single expression
+{% highlight html %}
+ <div v-bind:id="'modal-' + id"></div>
+{% endhighlight %}
 
 **Directives**
 * Directives are special attributes with the v- prefix (bind, if, for, html etc)
-* <p v-if="seen">Now you see me</p>
 * Directive attribute values are expected to be a single JavaScript expression 
+{% highlight html %}
+ <p v-if="seen">Now you see me</p>
+{% endhighlight %}
 
 **Arguments**
-* <a v-bind:href="url"> ... </a>
 * Here href is the argument, which tells the v-bind directive to bind the element’s href attribute to the value of the expression url.
+{% highlight html %}
+ <a v-bind:href="url"> ... </a>
+{% endhighlight %}
 
 **Modifiers**
-* <form v-on:submit.prevent="onSubmit"> ... </form>
 * .prevent modifier tells the v-on directive to call event.preventDefault() on the triggered event
+{% highlight html %}
+ <form v-on:submit.prevent="onSubmit"> ... </form>
+{% endhighlight %}
 
 **Shorthands**
 * Vue.js provides special shorthands for two of the most often used directives, v-bind and v-on
-* <a v-bind:href="url"> ... </a> to <a :href="url"> ... </a>
-* <a v-on:click="doSomething"> ... </a> to <a @click="doSomething"> ... </a>
+{% highlight html %}
+ <a v-bind:href="url"> </a>
+ <a :href="url"> ... </a>
+ <a v-on:click="doSomething"> ... </a> 
+ <a @click="doSomething"> ... </a>
+{% endhighlight %}
 
 **Computed Properties**
 * dependency relationship is created between the data and the computed fnunction, 
