@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Handle SELECT INTO TempTable In IF/ELSE Statement
-categories: [MS-Sql-Server,What-Did-I-Learn-Today]
+title: SQL tips
+categories: [MS-Sql-Server]
 tags: [MS-Sql-Server,What-Did-I-Learn-Today]
 description: Handle SELECT INTO TempTable In IF/ELSE Statement
 fullview: true
